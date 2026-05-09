@@ -137,3 +137,7 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+frontend/public/v1.zip
+frontend/public/v1/
+*.exe
+*.zip
