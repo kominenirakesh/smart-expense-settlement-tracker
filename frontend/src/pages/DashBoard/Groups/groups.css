@@ -1,0 +1,133 @@
+.groups-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* CARD */
+.group-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.group-card:hover {
+  transform: translateY(-5px);
+}
+
+/* HEADER */
+.group-header {
+  background: linear-gradient(135deg, #9db4d3, #6f86b6);
+  padding: 20px;
+  color: #2c3e50;
+}
+
+.group-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.group-header p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* BODY */
+.group-body {
+  padding: 20px;
+}
+
+/* STATUS */
+.status {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.settled {
+  background: #d4edda;
+  color: #2e7d32;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.owe {
+  background: #e6f4ea;
+  color: #1b5e20;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* BOTTOM */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category {
+  background: #f3e5ab;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* AVATARS */
+.avatars {
+  display: flex;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #ffc107;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-left: -10px;
+  border: 2px solid white;
+}
+
+.avatar.extra {
+  background: #ccc;
+}
+.status {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* settled */
+.settled {
+  background: #e2e8f0;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* owed */
+.owed {
+  background: #dcfce7;
+  color: #16a34a;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* owe */
+.owe {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 820">
+
+<!-- phone body -->
+<rect x="40" y="10" width="340" height="780" rx="60" fill="#0e1630"></rect>
+
+<!-- screen -->
+<rect x="70" y="90" width="280" height="600" rx="30" fill="#f7f7f7"></rect>
+
+<!-- notch -->
+<rect x="170" y="50" width="80" height="20" rx="10" fill="#000"></rect>
+
+<!-- app title -->
+<text x="210" y="140" text-anchor="middle" font-size="26" fill="#222" font-weight="bold">
+SmartSplit
+</text>
+
+<!-- gold balance card -->
+<defs>
+  <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#f6d365"></stop>
+    <stop offset="100%" stop-color="#d4a017"></stop>
+  </linearGradient>
+</defs>
+
+<rect x="100" y="170" width="220" height="130" rx="18" fill="url(#gold)"></rect>
+
+<text x="115" y="210" font-size="14" fill="#ffffff">Balance</text>
+<text x="115" y="250" font-size="32" fill="#ffffff" font-weight="bold">₹21,000</text>
+
+<!-- tabs -->
+<rect x="110" y="320" width="60" height="28" rx="14" fill="#d4a017"></rect>
+<text x="140" y="340" font-size="12" text-anchor="middle" fill="#fff">Activity</text>
+
+<rect x="180" y="320" width="60" height="28" rx="14" fill="#ddd"></rect>
+<text x="210" y="340" font-size="12" text-anchor="middle" fill="#555">Expenses</text>
+
+<rect x="250" y="320" width="60" height="28" rx="14" fill="#ddd"></rect>
+<text x="280" y="340" font-size="12" text-anchor="middle" fill="#555">Stats</text>
+
+<!-- activity cards -->
+<rect x="100" y="370" width="220" height="60" rx="12" fill="#ffffff" stroke="#eee"></rect>
+<text x="115" y="405" font-size="14" fill="#333">Trip Expense</text>
+<text x="300" y="405" font-size="14" text-anchor="end" fill="#333">₹840</text>
+
+<rect x="100" y="450" width="220" height="60" rx="12" fill="#ffffff" stroke="#eee"></rect>
+<text x="115" y="485" font-size="14" fill="#333">Groceries</text>
+<text x="300" y="485" font-size="14" text-anchor="end" fill="#333">₹380</text>
+
+<rect x="100" y="530" width="220" height="60" rx="12" fill="#ffffff" stroke="#eee"></rect>
+<text x="115" y="565" font-size="14" fill="#333">Dinner</text>
+<text x="300" y="565" font-size="14" text-anchor="end" fill="#333">₹280</text>
+
+</svg>

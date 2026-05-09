@@ -1,0 +1,82 @@
+.main {
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.form-container {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* INPUT */
+.form-container input {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* MEMBERS */
+.members-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.member-input {
+  display: flex;
+  gap: 10px;
+}
+
+.member-input input {
+  flex: 1;
+}
+
+.member-input button {
+  padding: 10px 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* CHIPS */
+.members-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.member-chip {
+  background: #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.member-chip span {
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* BUTTON */
+.submit-btn {
+  width: 200px;
+  align-self: flex-end;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

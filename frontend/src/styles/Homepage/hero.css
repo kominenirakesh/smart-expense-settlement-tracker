@@ -1,0 +1,58 @@
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:120px 80px;
+  color:white;
+}
+
+.hero-left{
+  max-width:520px;
+}
+
+.hero-left h1{
+  font-size:64px;
+  line-height:1.2;
+}
+
+.hero-left span{
+  color:#f2c94c;
+}
+
+.hero-left p{
+  margin-top:20px;
+  color:#c7cbe2;
+  font-size:18px;
+}
+
+.hero-btn{
+  margin-top:30px;
+  padding:14px 34px;
+  background:#f2c94c;
+  border:none;
+  border-radius:10px;
+  font-weight:600;
+}
+
+.hero-right{
+  position:relative;
+}
+
+.phone{
+  width:340px;
+}
+
+.coin{
+  position:absolute;
+  width:80px;
+}
+
+.coin1{
+  top:60px;
+  right:-40px;
+}
+
+.coin2{
+  bottom:60px;
+  left:-40px;
+}

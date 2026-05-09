@@ -1,0 +1,24 @@
+{
+  "name": "intro-to-backend",
+  "version": "1.0.0",
+  "description": "Tutuorial for the BackEnd",
+  "license": "ISC",
+  "author": "Rakesh Patel",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.4",
+    "nodemailer": "^8.0.2",
+    "nodemon": "^3.1.14",
+    "react-hot-toast": "^2.6.0"
+  }
+}

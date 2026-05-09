@@ -1,0 +1,10 @@
+import express from "express";
+import {verifyToken} from "../middleware/auth.middleware.js";
+import { CreatePost,GetPost, UpdatePost ,DeletePost,GetLoginUserPost} from "../controllers/post.controller.js";
+const router =  express.Router();
+router.post("/create",verifyToken,CreatePost);
+router.get("/get",verifyToken,GetPost);
+router.get("/getUser",verifyToken,GetLoginUserPost);
+router.patch("/update/:id",verifyToken,UpdatePost);
+router.delete("/delete/:id",verifyToken,DeletePost);
+export default router;

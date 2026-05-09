@@ -1,0 +1,94 @@
+/* OVERLAY */
+.qr-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* MODAL */
+.qr-modal {
+  background: #ffffff;
+  padding: 24px 20px;
+  border-radius: 18px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  animation: fadeIn 0.25s ease;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* TITLE */
+.qr-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+/* QR BOX */
+.qr-container {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* INFO */
+.qr-info {
+  margin-bottom: 16px;
+}
+
+.qr-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+.qr-upi {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.qr-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #16a34a;
+  margin-top: 4px;
+}
+
+/* BUTTON */
+.qr-btn {
+  width: 100%;
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.qr-btn:hover {
+  background: #15803d;
+}

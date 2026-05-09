@@ -1,0 +1,40 @@
+.title {
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+/* CREATE GROUP CARD */
+.create-group-card {
+  width: 500px;
+  height: 220px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #8ea9db, #6c7aa8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.create-group-card .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* FLOATING BUTTON */
+.floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}

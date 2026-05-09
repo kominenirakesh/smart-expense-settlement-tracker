@@ -1,0 +1,44 @@
+.how{
+  background:#f5f1ea;
+  padding:90px 20px;
+  text-align:center;
+}
+
+.how h2{
+  font-size:38px;
+  color:#2c2c2c;
+}
+
+.how-sub{
+  margin-top:10px;
+  color:#777;
+}
+
+.steps{
+  margin-top:60px;
+  display:flex;
+  justify-content:center;
+  gap:100px;
+}
+
+.step{
+  max-width:220px;
+}
+
+.step img{
+  width:150px;
+  height:150px;
+  object-fit:contain;
+  margin-bottom:20px;
+  border-radius: 10px;
+}
+
+.step h3{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.step p{
+  color:#777;
+  font-size:14px;
+}

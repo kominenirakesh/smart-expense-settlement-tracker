@@ -1,0 +1,14 @@
+import express from 'express';
+import {verifyToken} from "../middleware/auth.middleware.js";
+import {Create,GetGroupByID, GetGroups,AddMembers,GetGroupBalance,SendReminder,markAsPaid, getGroupSettlements,updateGroup} from '../controllers/gruop.controller.js';
+const router = express.Router();
+router.post("/create",verifyToken,Create);
+router.get("/get/:id",verifyToken,GetGroupByID);
+router.get("/balance/:id",verifyToken,GetGroupBalance);
+router.get("/get",verifyToken,GetGroups);
+router.post("/send-reminder",verifyToken,SendReminder);
+router.patch("/add-members/:id",verifyToken,AddMembers);
+router.patch("/settlement/pay/:settlementId", verifyToken, markAsPaid);
+router.get("/settlements/:id", verifyToken, getGroupSettlements);
+router.put("/update/:id", verifyToken, updateGroup);
+export default router;
