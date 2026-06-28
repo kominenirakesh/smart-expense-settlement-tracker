@@ -1,6 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import axios from "axios";
+import api from "../../../services/GobalApi.js"
 
 function AddExpenseModal({ group, onClose, onSuccess }) {
   const [amount, setAmount] = useState("");
@@ -26,8 +26,8 @@ function AddExpenseModal({ group, onClose, onSuccess }) {
     }
 
     try {
-      await axios.post(
-        "http://localhost:4000/api/v1/expense/add",
+      await api.post(
+        "/expense/add",
         {
           amount: Number(amount),
           description,

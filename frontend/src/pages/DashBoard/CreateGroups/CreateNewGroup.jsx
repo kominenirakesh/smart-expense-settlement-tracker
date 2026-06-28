@@ -1,10 +1,10 @@
 import { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../Sidebar";
 import Topbar from "../Topbar";
 import "./createNewGroup.css";
 import Groups from "../Groups/Groups";
+import api from "../../../services/GobalApi";
 
 function CreateNewGroup() {
   const [groupName, setGroupName] = useState("");
@@ -35,8 +35,8 @@ const handleSubmit = async () => {
   try {
     const token = sessionStorage.getItem("token");
 
-    const res = await axios.post(
-      "http://localhost:4000/api/v1/groups/create",
+    const res = await api.post(
+      "/groups/create",
       data,
       {
         headers: {

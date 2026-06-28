@@ -46,33 +46,6 @@ export const Create = async (req, res, next) => {
   }
 };
 
-// export const Create = async (req,res,next)=>
-// {
-//      try {
-//         const{name,members} = req.body;
-//         if(!name || !members)
-//         {
-//           return next(new ApiError(400,"All fields are required"));
-//         }
-//         const GroupExisiting = await Group.findOne({name});
-//         if(GroupExisiting)
-//         {
-//           return next(new ApiError(400,"GroupName already Exists"));
-//         }
-//         console.log(req.user);
-//         const creategroup = await Group.create(
-//           {
-//             name,
-//             CreatedBy:req.user.id,
-//             members:[req.user.id,...members],
-//           }
-//         );
-//         res.status(201).json(new ApiResponse(201,creategroup,"GroupCreated"));
-         
-//      } catch (error) {
-//        next(error);  
-//      }
-// }
 
 export const GetGroupByID = async(req,res,next)=>
 {
@@ -91,8 +64,6 @@ export const GetGroupByID = async(req,res,next)=>
     next(error);
   }
 }
-
-
 
 export const AddMembers = async (req, res, next) => {
   try {
@@ -116,81 +87,6 @@ export const AddMembers = async (req, res, next) => {
     next(error);
   }
 };
-
-// export const GetGroupBalance = async (req, res, next) => {
-//   try {
-//     const group = req.params.id;
-
-//     // ✅ Use "PaidBy" to match Expense schema
-//     // ✅ Use "username" to match User schema
-//     const expenses = await Expense.find({ group })
-//       .populate("PaidBy", "username")
-//       .populate("splitBetween", "username");
-
-//     if (!expenses.length) {
-//       return next(new ApiError(404, "No expenses found"));
-//     }
-
-//     const balances = {};
-
-//     expenses.forEach(expense => {
-//       if (!expense.PaidBy) return; // defensive check
-
-//       const splitAmount = expense.amount / expense.splitBetween.length;
-//       const payer = expense.PaidBy.username; // ✅ use username
-
-//       expense.splitBetween.forEach(member => {
-//         if (!member) return; // defensive check
-//         const debtor = member.username; // ✅ use username
-
-//         if (debtor !== payer) {
-//           if (!balances[debtor]) balances[debtor] = {};
-//           if (!balances[payer]) balances[payer] = {};
-
-//           balances[debtor][payer] =
-//             (balances[debtor][payer] || 0) + splitAmount;
-//         }
-//       });
-//     });
-
-//     const simplified = [];
-
-//     Object.keys(balances).forEach(debtor => {
-//       Object.keys(balances[debtor]).forEach(creditor => {
-//         const amount = balances[debtor][creditor];
-//         const reverse = balances[creditor] && balances[creditor][debtor];
-
-//         if (reverse) {
-//           if (amount > reverse) {
-//             simplified.push({
-//               from: debtor,
-//               to: creditor,
-//               amount: amount - reverse
-//             });
-//           }
-//           balances[creditor][debtor] = 0;
-//           balances[debtor][creditor] = 0;
-//         } else if (amount > 0) {
-//           simplified.push({
-//             from: debtor,
-//             to: creditor,
-//             amount
-//           });
-//         }
-//       });
-//     });
-
-//     res.status(200).json({
-//       success: true,
-//       data: simplified,
-//       message: "Group balance calculated"
-//     });
-//   } catch (error) {
-//     next(error);
-//   }
-// };
-
-
 
 export const getGroupSettlements = async (req, res, next) => {
   try {
@@ -299,7 +195,7 @@ export const markAsPaid = async (req, res, next) => {
 export const SendReminder = async (req, res, next) => {
   try {
 
-    console.log(req.body); // debug
+ //   console.log(req.body); // debug
 
     const { email, debtor, creditor, amount, groupName } = req.body;
 

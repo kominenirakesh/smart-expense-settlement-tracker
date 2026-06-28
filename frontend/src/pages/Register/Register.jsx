@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "./Register.css";
 import Navbar from "../Header/Navbar.jsx";
 import { Link,useNavigate } from "react-router-dom";
+import api from "../../services/GobalApi.js";
 
 function Register() {
 
@@ -23,8 +23,8 @@ function Register() {
   const RegisterUser = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:4000/api/v1/users/register",
+      const response = await api.post(
+        "/users/register",
         fromData
       );
       console.log(response.data);

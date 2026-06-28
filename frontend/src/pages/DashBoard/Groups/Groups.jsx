@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../Sidebar";
 import Topbar from "../Topbar";
-import axios from "axios";
 import CreateGroupCard from "./CreateGroupCard";
 import GroupsCard from "./GroupsCard.jsx";
 import "../../../styles/DashBoard/groups.css";
 import { useNavigate } from "react-router-dom";
-
+import api from "../../../services/GobalApi.js"
 function Groups() {
   const [groups, setGroups] = useState([]);
   const navigate = useNavigate();
@@ -20,8 +19,8 @@ function Groups() {
         return;
       }
 
-      const res = await axios.get(
-        "http://localhost:4000/api/v1/groups/get",
+      const res = await api.get(
+        "/groups/get",
         {
           headers: {
             Authorization: `Bearer ${token}`,

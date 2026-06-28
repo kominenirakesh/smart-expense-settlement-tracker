@@ -14,8 +14,8 @@ import { createSettlementsFromBalances } from "../service/settlement.service.js"
 export const AddExpense = async (req, res, next) => {
   try {
     const { amount, description, category, groupId, splitBetween } = req.body;
-    console.log("REQ BODY:", req.body);
-    console.log("REQ USER:", req.user);
+    // console.log("REQ BODY:", req.body);
+    // console.log("REQ USER:", req.user);
 
     if (!amount || !groupId) {
       return next(new ApiError(400, "Amount and groupId required"));
@@ -70,8 +70,6 @@ export const AddExpense = async (req, res, next) => {
   }
 };
 
-
-
 // ===================== GET SINGLE EXPENSE =====================
 export const GetExpense = async (req, res, next) => {
   try {
@@ -92,9 +90,6 @@ export const GetExpense = async (req, res, next) => {
     next(error);
   }
 };
-
-
-
 // ===================== GET GROUP EXPENSES =====================
 export const GetGroupExpenses = async (req, res, next) => {
   try {
@@ -113,9 +108,6 @@ export const GetGroupExpenses = async (req, res, next) => {
     next(error);
   }
 };
-
-
-
 // ===================== GET BALANCES + SETTLEMENT =====================
 export const getBalances = async (req, res, next) => {
   try {
@@ -132,7 +124,7 @@ export const getBalances = async (req, res, next) => {
 
   const balances = calculateGroupBalances(expenses, paidSettlements);
 
-    console.log("🔥 BALANCES:", balances);
+    // console.log("🔥 BALANCES:", balances);
 
     const transactions = simplifyBalances(balances);
 

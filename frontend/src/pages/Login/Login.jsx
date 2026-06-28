@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
 import Navbar from "../Header/Navbar.jsx";
 import { useNavigate, Link } from "react-router-dom";
 import "./Login.css";
-
+import api from "../../services/GobalApi.js";
 function Login() {
   const navigate = useNavigate(); // ✅ move inside component
 
@@ -23,8 +22,8 @@ function Login() {
   const LoginUser = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:4000/api/v1/users/login",
+      const response = await api.post(
+        "/users/login",
         fromdata
       );
 

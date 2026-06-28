@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useEffect, useState, useMemo } from "react";
-import axios from "axios";
 import Sidebar from "../Sidebar";
 import Topbar from "../Topbar";
 import "./groupDetails.css";
@@ -9,6 +8,7 @@ import AddExpenseModal from "./AddExpenseModal.jsx";
 import SettlementList from "./settlement/SettlementList.jsx";
 import { formatCurrency } from "../../../utils/formatCurrency.jsx";
 import Chart from "./charts/Chart.jsx";
+import api from "../../../services/GobalApi.js";
 
 function GroupDetails() {
   const { id } = useParams();
@@ -37,8 +37,8 @@ function GroupDetails() {
     try {
       const token = sessionStorage.getItem("token");
 
-      const res = await axios.get(
-        `http://localhost:4000/api/v1/groups/get/${id}`,
+      const res = await api.get(
+        `/groups/get/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -55,8 +55,8 @@ function GroupDetails() {
     try {
       const token = sessionStorage.getItem("token");
 
-      const res = await axios.get(
-        `http://localhost:4000/api/v1/expense/group/${id}`,
+      const res = await api.get(
+        `/expense/group/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -73,8 +73,8 @@ const fetchBalances = async () => {
   try {
     const token = sessionStorage.getItem("token");
 
-    const res = await axios.get(
-      `http://localhost:4000/api/v1/expense/balance/${id}`,
+    const res = await api.get(
+      `/expense/balance/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -98,8 +98,8 @@ const fetchBalances = async () => {
     try {
       const token = sessionStorage.getItem("token");
 
-      const res = await axios.get(
-        `http://localhost:4000/api/v1/groups/settlements/${id}`,
+      const res = await api.get(
+        `/groups/settlements/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -168,8 +168,8 @@ const formattedSettlements = pendingSettlements.map((t) => {
        // ⚡ Instant UI feel (optional but nice)
        setSettlements(prev => prev.filter(s => s._id !== id));
 
-      await axios.patch(
-        `http://localhost:4000/api/v1/groups/settlement/pay/${id}`,
+      await api.patch(
+        `/groups/settlement/pay/${id}`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -192,8 +192,8 @@ const formattedSettlements = pendingSettlements.map((t) => {
   try {
     const token = sessionStorage.getItem("token");
 
-    await axios.put(
-      `http://localhost:4000/api/v1/groups/update/${group._id}`,
+    await api.put(
+      `/groups/update/${group._id}`,
       {
         name: editName,
         members: editMembers.map(m => m._id),
@@ -225,8 +225,8 @@ const handleSearch = async (query) => {
   try {
     const token = sessionStorage.getItem("token");
 
-    const res = await axios.get(
-      `http://localhost:4000/api/v1/users/search?query=${query}`,
+    const res = await api.get(
+      `/users/search?query=${query}`,
       {
         headers: { Authorization: `Bearer ${token}` },
       }
