@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./UserProfile.css";
+import "./userProfile.css";
 
 function ProfileCard() {
 
