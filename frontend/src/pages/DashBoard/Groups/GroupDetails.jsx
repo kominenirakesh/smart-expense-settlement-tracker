@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { useEffect, useState, useMemo } from "react";
 import Sidebar from "../Sidebar";
 import Topbar from "../Topbar";
-import "./groupDetails.css";
+import "./GroupDetails.css";
 import AddExpenseModal from "./AddExpenseModal.jsx";
 import SettlementList from "./settlement/SettlementList.jsx";
 import { formatCurrency } from "../../../utils/formatCurrency.jsx";
